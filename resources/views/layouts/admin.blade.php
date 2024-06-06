@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Login Admininistrator Apotek</title>
+    <title>Dashboard Admininistrator Apotek</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -81,53 +81,39 @@
         </div>
     </div>
     <!-- Pre-loader end -->
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+            @include('partials.nav-admin')
 
-    <section class="login-block">
-        <!-- Container-fluid starts -->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <!-- Authentication card start -->
-
-                    <form action="" method="" class="md-float-material form-material">
-
-                        <div class="auth-box card">
-                            <div class="card-block">
-                                <div class="row m-b-20">
-                                    <div class="col-md-12">
-                                        <h3 class="text-center">Log In</h3>
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    @include('partials.sidebar-admin')
+                    <div class="pcoded-content">
+                        <!-- Page-header start -->
+                        <div class="page-header">
+                            <div class="page-block">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <div class="page-header-title">
+                                            <h5 class="m-b-10"> Dashboard Administrator </h5>
+                                            <p class="m-b-0"> {{ $title }} </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group form-primary">
-                                    <input type="text" name="email" class="form-control">
-                                    <span class="form-bar"></span>
-                                    <label class="float-label">Your Email Address</label>
-                                </div>
-                                <div class="form-group form-primary">
-                                    <input type="password" name="password" class="form-control">
-                                    <span class="form-bar"></span>
-                                    <label class="float-label">Password</label>
-                                </div>
 
-                                <div class="row m-t-30">
-                                    <div class="col-md-12">
-                                        <button type="button"
-                                            class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Log
-                                            in</button>
-                                    </div>
                                 </div>
-
                             </div>
                         </div>
-                    </form>
-                    <!-- end of form -->
+                        <!-- Page-header end -->
+                        <div class="pcoded-inner-content">
+                            <!-- Main-body start -->
+                            @yield('content')
+                        </div>
+                    </div>
                 </div>
-                <!-- end of col-sm-12 -->
             </div>
-            <!-- end of row -->
         </div>
-        <!-- end of container-fluid -->
-    </section>
+    </div>
 
 
     <!-- Required Jquery -->
