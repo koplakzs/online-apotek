@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,7 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::controller(HomeController::class)->group(function () {
     Route::get("/", "index");
     Route::get("/contact", "contact");
-    Route::get("/about", "contact");
-    Route::get("/service", "contact");
-    Route::get("/login", "contact");
+    Route::get("/about", "about");
+    Route::get("/service", "service");
+});
+
+Route::controller(AuthController::class)->group(function () {
+    Route::get("/admin-login", "login");
 });

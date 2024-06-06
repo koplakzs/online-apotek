@@ -22,8 +22,4 @@ class HomeController extends Controller
     {
         return view("pages.service");
     }
-    public function login()
-    {
-        return view("pages.login");
-    }
 }
