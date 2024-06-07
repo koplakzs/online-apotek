@@ -23,10 +23,10 @@
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <h5 class="text-light mb-4">Quick Links</h5>
-                <a class="btn btn-link" href="">About Us</a>
-                <a class="btn btn-link" href="">Contact Us</a>
-                <a class="btn btn-link" href="">Services</a>
-                <a class="btn btn-link" href="">Support</a>
+                <a class="btn btn-link" href="/about">About Us</a>
+                <a class="btn btn-link" href="/contact">Contact Us</a>
+                <a class="btn btn-link" href="/services">Services</a>
+                <a class="btn btn-link" href="/">home</a>
             </div>
         </div>
     </div>    
