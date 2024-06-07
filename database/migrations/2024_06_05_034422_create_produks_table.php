@@ -17,10 +17,10 @@ return new class extends Migration
             $table->integer("harga");
             $table->text("deskripsi");
             $table->string("images");
-            $table->unsignedBigInteger("service_id");
+            $table->unsignedBigInteger("kategori_id");
             $table->timestamps();
 
-            $table->foreign("service_id")->references("service_id")->on("services")->cascadeOnDelete();
+            $table->foreign("kategori_id")->references("kategori_id")->on("kategoris")->cascadeOnDelete();
         });
     }
 

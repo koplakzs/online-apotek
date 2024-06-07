@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kategori;
 use Illuminate\Http\Request;
 
 class KategoriController extends Controller
@@ -11,9 +12,9 @@ class KategoriController extends Controller
      */
     public function index()
     {
-
+        $data = Kategori::all();
         $title = "Welcome to Dashboard Kategori";
-        return view("pages.admin.category", compact("title"));
+        return view("pages.admin.category", compact("title", "data"));
     }
 
     /**
@@ -29,7 +30,16 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request->validate([
+            "nama_kategori" => "required"
+        ]);
+
+        $kategoriModel = new Kategori();
+
+        $kategoriModel->nama_kategori = $validate["nama_kategori"];
+        $kategoriModel->save();
+
+        return redirect("/administrator/category");
     }
 
     /**
@@ -45,7 +55,10 @@ class KategoriController extends Controller
      */
     public function edit(string $id)
     {
-        //
+
+        $data = Kategori::find($id);
+        $title = "Welcome to Dashboard Edit Kategori";
+        return view("pages.admin.edit-category", compact("title", "data"));
     }
 
     /**
@@ -53,7 +66,16 @@ class KategoriController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $kategoriModel = Kategori::find($id);
+        $validate = $request->validate([
+            "nama_kategori" => "required"
+        ]);
+
+
+        $kategoriModel->nama_kategori = $validate["nama_kategori"];
+        $kategoriModel->save();
+
+        return redirect("/administrator/category");
     }
 
     /**
@@ -61,6 +83,10 @@ class KategoriController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $kategoriModel = Kategori::find($id);
+
+        $kategoriModel->delete();
+
+        return redirect("/administrator/category");
     }
 }
