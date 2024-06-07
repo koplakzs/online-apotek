@@ -33,7 +33,7 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1>Jenis Obat Yang Kami Sediakan</h1>
+                    <h1>Beberapa Jenis Obat Yang Kami Sediakan</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -44,7 +44,6 @@
                             </div>
                             <h4 class="mb-3">Antibiotik</h4>
                             <p class="mb-4">Obat yang digunakan untuk mengobati infeksi bakteri.</p>
-                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -56,7 +55,6 @@
                             <h4 class="mb-3">Antasida</h4>
                             <p class="mb-4">Obat yang dapat meredakan gangguan pencernaan 
                                 dan gejala mulas dengan cara menetralkan asam lambung.</p>
-                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -67,7 +65,6 @@
                             </div>
                             <h4 class="mb-3">Antidiare</h4>
                             <p class="mb-4">Obat ini digunakan untuk mengatasi buang air besar encer berkali-kali alias diare.</p>
-                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -79,7 +76,6 @@
                             <h4 class="mb-3">Antijamur</h4>
                             <p class="mb-4">Jenis obat ini digunakan untuk mengobati infeksi jamur 
                                 yang umumnya menyerang rambut, kulit, kuku, atau selaput lendir.</p>
-                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -91,7 +87,6 @@
                             <h4 class="mb-3">Antipiretik</h4>
                             <p class="mb-4">Golongan obat antipiretik berfungsi untuk menurunkan demam 
                                 dan meredakan nyeri akibat radang sendi, cedera, sakit gigi, dan sakit kepala.</p>
-                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -103,7 +98,6 @@
                             <h4 class="mb-3">Analgesik</h4>
                             <p class="mb-4">Fungsi dari obat analgesik adalah untuk meredakan nyeri, 
                                 baik nyeri ringan maupun nyeri berat.</p>
-                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
                         </div>
                     </div>
                 </div>
@@ -118,7 +112,7 @@
                 <div class="row g-0 mx-lg-0">
                     <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
                         <div class="p-lg-5 ps-lg-0">
-                            <h1 class="text-white mb-4">Mengapa harus memilih kami?</h1>
+                            <h1 class="text-white mb-4">Mengapa Harus Memilih Kami?</h1>
                             <div class="row g-4">
                                 <div class="col-6">
                                     <div class="d-flex align-items-center">
