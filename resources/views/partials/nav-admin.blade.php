@@ -56,7 +56,7 @@
                         </li>
 
                         <li class="waves-effect waves-light">
-                            <a href="logout">
+                            <a href="/logout">
                                 <i class="ti-layout-sidebar-left"></i> Logout
                             </a>
                         </li>

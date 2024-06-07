@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::controller(HomeController::class)->group(function () {
-    Route::get("/", "index");
+    Route::get("/", "index")->name("home");
     Route::get("/product", "product");
     Route::get("/contact", "contact");
     Route::get("/about", "about");
@@ -29,15 +29,19 @@ Route::controller(HomeController::class)->group(function () {
 
 Route::controller(AuthController::class)->group(function () {
     Route::get("/admin-login", "login");
+    Route::post("/admin-login", "authenticate");
+    Route::get("/logout", "logout");
 });
 
-Route::prefix("administrator")->group(function () {
-    Route::controller(AdminController::class)->group(function () {
-        Route::get("/", "index");
-        Route::get("/profile", "profile");
-        Route::get("/setting", "setting");
+Route::middleware(["auth"])->group(function () {
+    Route::prefix("administrator")->group(function () {
+        Route::controller(AdminController::class)->group(function () {
+            Route::get("/", "index");
+            Route::get("/profile", "profile");
+            Route::get("/setting", "setting");
+        });
+        Route::resource("/product", ProdukController::class);
+        Route::resource("/service", ServiceController::class);
+        Route::resource("/category", KategoriController::class);
     });
-    Route::resource("/product", ProdukController::class);
-    Route::resource("/service", ServiceController::class);
-    Route::resource("/category", KategoriController::class);
 });

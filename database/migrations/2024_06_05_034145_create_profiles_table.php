@@ -19,7 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('admin_id');
             $table->timestamps();
 
-            $table->foreign("admin_id")->references("admin_id")->on("admins")->cascadeOnDelete();
+            $table->foreign("admin_id")->references("id")->on("users")->cascadeOnDelete();
         });
     }
 
