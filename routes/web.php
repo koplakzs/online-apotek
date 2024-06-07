@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get("/", "index");
+    Route::get("/product", "product");
     Route::get("/contact", "contact");
     Route::get("/about", "about");
     Route::get("/service", "service");
