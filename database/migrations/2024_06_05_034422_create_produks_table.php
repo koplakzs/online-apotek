@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string("nama_produk", 50);
             $table->integer("harga");
             $table->text("deskripsi");
+            $table->string("images");
             $table->unsignedBigInteger("service_id");
             $table->timestamps();
 

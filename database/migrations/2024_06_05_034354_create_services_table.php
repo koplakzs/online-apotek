@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id("service_id");
             $table->string("nama_services", 50);
             $table->text("deskripsi");
+            $table->string("images");
             $table->unsignedBigInteger("kategori_id");
             $table->timestamps();
 

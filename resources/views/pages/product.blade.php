@@ -10,7 +10,7 @@
                     <div class="row g-4">
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="service-item bg-light rounded h-100 p-5">
-                                <img src="landing/img/paracetamol.jpg" style="width: 300px; height: 300px;">
+                                <img src="landing/img/paracetamol.jpg" style="width: 100%; height: 100%;">
                                 <h4 class="mb-3 text-center">Paracetamol</h4>
                             </div>
                         </div>
