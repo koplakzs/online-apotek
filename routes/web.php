@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get("/", "index");
+    Route::get("/product", "product");
     Route::get("/contact", "contact");
     Route::get("/about", "about");
     Route::get("/service", "service");
@@ -24,4 +29,15 @@ Route::controller(HomeController::class)->group(function () {
 
 Route::controller(AuthController::class)->group(function () {
     Route::get("/admin-login", "login");
+});
+
+Route::prefix("administrator")->group(function () {
+    Route::controller(AdminController::class)->group(function () {
+        Route::get("/", "index");
+        Route::get("/profile", "profile");
+        Route::get("/setting", "setting");
+    });
+    Route::resource("/product", ProdukController::class);
+    Route::resource("/service", ServiceController::class);
+    Route::resource("/category", KategoriController::class);
 });

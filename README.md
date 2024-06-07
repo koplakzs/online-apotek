@@ -13,3 +13,4 @@ Anggota Kelompok
 -   Wan Nadila Artyka
 -   Marshanda
 -   Ridho Alfandi
+-   Digdaya Rayhan Bagaskara

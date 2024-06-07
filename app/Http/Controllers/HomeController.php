@@ -10,6 +10,10 @@ class HomeController extends Controller
     {
         return view("pages.home");
     }
+    public function product()
+    {
+        return view("pages.product");
+    }
     public function about()
     {
         return view("pages.about");

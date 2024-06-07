@@ -12,7 +12,7 @@
             <a href="/service" class="nav-item nav-link">Service</a>
             <a href="/contact" class="nav-item nav-link">Contact Us</a>
         </div>
-        <a href="/login" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Produk<i
+        <a href="/product" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Produk<i
                 class="fa fa-arrow-right ms-3"></i></a>
     </div>
 </nav>
