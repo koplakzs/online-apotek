@@ -12,8 +12,9 @@ class ProfileController extends Controller
      */
     public function index()
     {
+        $profile = Profile::all();
         $title = "Welcome to Dashboard Profile";
-        return view("pages.admin.profile", compact("title"));
+        return view("pages.admin.profile", compact("title", "profile"));
     }
 
     /**
@@ -21,7 +22,8 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        //
+        $title = "Welcome to Dashboard Profile";
+        return view('pages.admin.tambah-profile', compact("title"));
     }
 
     /**
@@ -29,7 +31,20 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama' => 'required',
+            'no_hp' => 'required',
+            'moto' => 'required',
+        ]);
+        $profile = new Profile;
+        $profile->nama = $request->input('nama');
+        $profile->no_hp = $request->input('no_hp');
+        $profile->moto = $request->input('moto');
+
+
+        $profile->save();
+
+        return redirect('/administrator/profile');
     }
 
     /**
@@ -45,7 +60,9 @@ class ProfileController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $profile = Profile::find($id);
+        $title = "Welcome to Dashboard Edit Profile";
+        return view("pages.admin.edit-profile", compact("title", "profile"));
     }
 
     /**
@@ -53,7 +70,21 @@ class ProfileController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $profile = Profile::find($id);
+        $request->validate([
+            'nama' => 'required|min:3',
+            'no_hp' => 'required',
+            'moto' => 'required',
+        ]);
+        Profile::where('id', $id)
+            ->update(
+                [
+                    'nama' => $request->input('nama'),
+                    'no_hp' => $request->input('no_hp'),
+                    'moto' => $request->input('moto'),
+                ]
+            );
+        return redirect("/administrator/profile");
     }
 
     /**
@@ -61,6 +92,10 @@ class ProfileController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $profile = Profile::find($id);
+
+        $profile->delete();
+
+        return redirect("/administrator/profile");
     }
 }
