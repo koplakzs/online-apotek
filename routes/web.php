@@ -39,6 +39,7 @@ Route::middleware(["auth"])->group(function () {
             Route::get("/", "index");
             Route::get("/profile", "profile");
             Route::get("/setting", "setting");
+            Route::post("/reset-account", "resetAccount");
         });
         Route::resource("/product", ProdukController::class);
         Route::resource("/service", ServiceController::class);
