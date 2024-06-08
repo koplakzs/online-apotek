@@ -45,5 +45,6 @@ Route::middleware(["auth"])->group(function () {
         Route::resource("/product", ProdukController::class);
         Route::resource("/service", ServiceController::class);
         Route::resource("/category", KategoriController::class);
+        Route::resource("/profile", ProfileController::class);
     });
 });

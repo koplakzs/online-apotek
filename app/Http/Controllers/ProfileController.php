@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Profile;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -23,7 +24,8 @@ class ProfileController extends Controller
     public function create()
     {
         $title = "Welcome to Dashboard Profile";
-        return view('pages.admin.tambah-profile', compact("title"));
+        $users = User::all(); 
+        return view('pages.admin.tambah-profile', compact("title", "users"));
     }
 
     /**
@@ -32,19 +34,22 @@ class ProfileController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama' => 'required',
-            'no_hp' => 'required',
-            'moto' => 'required',
-        ]);
-        $profile = new Profile;
-        $profile->nama = $request->input('nama');
-        $profile->no_hp = $request->input('no_hp');
-        $profile->moto = $request->input('moto');
+        'nama' => 'required',
+        'no_hp' => 'required',
+        'moto' => 'required',
+        'id_user' => 'required|exists:users,id', 
+    ]);
 
+    $profile = new Profile;
+    $profile->nama = $request->input('nama');
+    $profile->no_hp = $request->input('no_hp');
+    $profile->moto = $request->input('moto');
+    $profile->admin_id = $request->input('id_user'); 
 
-        $profile->save();
+    $profile->save();
 
-        return redirect('/administrator/profile');
+    return redirect('/administrator/profile');
+
     }
 
     /**
@@ -62,7 +67,8 @@ class ProfileController extends Controller
     {
         $profile = Profile::find($id);
         $title = "Welcome to Dashboard Edit Profile";
-        return view("pages.admin.edit-profile", compact("title", "profile"));
+        $users = User::all(); 
+        return view("pages.admin.edit-profile", compact("title", "profile", "users"));
     }
 
     /**
@@ -70,20 +76,21 @@ class ProfileController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $profile = Profile::find($id);
         $request->validate([
             'nama' => 'required|min:3',
             'no_hp' => 'required',
             'moto' => 'required',
+            'id_user' => 'required|exists:users,id', 
         ]);
-        Profile::where('id', $id)
-            ->update(
-                [
-                    'nama' => $request->input('nama'),
-                    'no_hp' => $request->input('no_hp'),
-                    'moto' => $request->input('moto'),
-                ]
-            );
+    
+        $profile = Profile::find($id);
+        $profile->update([
+            'nama' => $request->input('nama'),
+            'no_hp' => $request->input('no_hp'),
+            'moto' => $request->input('moto'),
+            'id_user' => $request->input('id_user'), 
+        ]);
+    
         return redirect("/administrator/profile");
     }
 

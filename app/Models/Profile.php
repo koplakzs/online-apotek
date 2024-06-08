@@ -11,5 +11,11 @@ class Profile extends Model
 
     protected $table = 'profiles';
 
-    protected $fillable = ['nama','no_hp','moto','admin_id'];
+    protected $fillable = ['nama','no_hp','moto','id_user'];
+
+    public function users()
+    {
+        return $this->belongsTo(User::class); // Relasi ke model User
+    }
+
 }

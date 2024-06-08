@@ -26,6 +26,11 @@
        <label>Moto</label><br>
         <textarea name="moto" class="from-control" cols="30" rows="10"></textarea>
     </div>
+    <select name="id_user">
+      @foreach($users as $user)
+          <option value="{{ $user->id }}">{{ $user->name }}</option>
+      @endforeach
+  </select>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 @endsection
