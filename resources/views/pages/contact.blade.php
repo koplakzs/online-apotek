@@ -36,7 +36,13 @@
                         </div>
                         <div class="ms-4">
                             <p class="mb-2">Panggil Kami Sekarang</p>
-                            <h5>{{ $profile->no_hp }}</h5>
+                            <h5>
+                            @if(!empty($profile->no_hp))
+                                {{ $profile->no_hp }}
+                            @else
+                                No Kosong
+                            @endif
+                            </h5>
                         </div>
                     </div>
                 </div>
