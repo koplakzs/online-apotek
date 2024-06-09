@@ -1,36 +1,44 @@
 @extends('layouts.admin')
 
 @section('content')
-<h3>Edit Profile</h3>
-<form method="POST" action="/administrator/profile">
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
+    <div class="main-body">
+        <div class="card">
+            <div class="card-header ">
+                <h5>Halaman Profile</h5>
+            </div>
+            <div class="card-block table-border-style">
 
-    @csrf
-    <div class="form-group">
-      <label >Nama</label>
-      <input type="text" class="form-control" name="nama">
+                <form action="/administrator/profile/{{ $profile->profile_id }}" method="POST">
+                    @method('put')
+                    @csrf
+                    <div class="form-group">
+                        <label for="name">Nama</label>
+                        <input type="text" id="name" class="form-control" name="nama"
+                            value=" {{ $profile->nama }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">No Hp</label>
+                        <input type="number" id="phone" class="form-control" name="no_hp"
+                            value="{{ $profile->no_hp }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="moto">Moto</label><br>
+                        <textarea name="moto" id="moto" class="form-control" rows="3">  {{ $profile->moto }} </textarea>
+                    </div>
+                    <input type="hidden" id="email" class="form-control w-100" value="{{ $user->id_user }}"
+                        name="id_user" readonly>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control w-100" value="{{ $user->email }}"
+                            readonly>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Edit Profile</button>
+                </form>
+
+            </div>
+
+        </div>
+
     </div>
-    <div class="form-group">
-      <label >No Hp</label>
-      <input type="number" class="form-control" name="no_hp">
-    </div>
-    <div class="form-group">
-       <label>Moto</label><br>
-        <textarea name="moto" class="from-control" cols="20" rows="10"></textarea>
-    </div>
-    <select name="id_user">
-        @foreach($users as $user)
-            <option value="{{ $user->id }}">{{ $user->name }}</option>
-        @endforeach 
-    </select>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
 @endsection
