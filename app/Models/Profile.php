@@ -10,12 +10,13 @@ class Profile extends Model
     use HasFactory;
 
     protected $table = 'profiles';
+    protected $primaryKey = "profile_id";
 
-    protected $fillable = ['nama','no_hp','moto','id_user'];
+
+    protected $fillable = ['nama', 'no_hp', 'moto', 'id_user'];
 
     public function users()
     {
         return $this->belongsTo(User::class); // Relasi ke model User
     }
-
 }
