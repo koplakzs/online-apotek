@@ -24,7 +24,7 @@
                   <td>{{$item->moto}}</td>
                   <td>
                   <form action="/administrator/profile/{{$item->id}}" method="POST" onsubmit="return confirmDelete(event)">
-                      <a href="/administrator/proofile/{{$item->id}}" class="btn btn-sm btn-info">Detail</a>
+                      <a href="/administrator/profile/{{$item->id}}" class="btn btn-sm btn-info">Detail</a>
                       <a href="/administrator/profile/{{$item->id}}/edit" class="btn btn-sm btn-warning">Edit</a>
                       @csrf
                       @method("DELETE")

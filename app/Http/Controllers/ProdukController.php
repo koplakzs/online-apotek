@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Produk;
 
 class ProdukController extends Controller
 {
@@ -11,9 +12,9 @@ class ProdukController extends Controller
      */
     public function index()
     {
-
+        $produk = Produk::all();
         $title = "Welcome to Dashboard Produk";
-        return view("pages.admin.produck", compact("title"));
+        return view("pages.admin.produck", compact("title", "produk"));
     }
 
     /**
@@ -21,7 +22,9 @@ class ProdukController extends Controller
      */
     public function create()
     {
-        //
+        $produk = produk::all();
+        $title = "Welcome to Dashboard Produk";
+        return view ('pages.admin.tambah-produk', compact("title"));
     }
 
     /**
@@ -29,7 +32,20 @@ class ProdukController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama_produk' => 'required',
+            'harga' => 'required',
+            'deskripsi' => 'required',
+        ]);
+
+        $produk = new Produk;
+        $produk->nama_produk = $request->input('nama_produk');
+        $produk->harga = $request->input('harga');
+        $produk->deskripsi = $request->input('deskripsi');
+        
+        $produk->service_id=1;
+        $produk->save();
+        return redirect('/administrator/product');
     }
 
     /**

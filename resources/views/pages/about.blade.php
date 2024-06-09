@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <p class="d-inline-block border rounded-pill py-1 px-4">About Us</p>
+                    <p class="d-inline-block border rounded-pill py-1 px-4">Tentang Kami</p>
                     <h1 class="mb-4">Mengapa Kamu Harus Percaya Kepada Kami ? Ketahui Tentang Kami !</h1>
                     <p>Kami adalah apotek terpercaya yang berdedikasi untuk menyediakan produk kesehatan berkualitas tinggi dan layanan yang ramah serta profesional.</p>
                     <p class="mb-4">Didirikan sejak pada tahun 1985, kami telah berkomitmen untuk menjadi mitra kesehatan terpercaya bagi masyarakat.</p>

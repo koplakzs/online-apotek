@@ -21,7 +21,7 @@
                         <p class="mb-4" style="text-align: justify; display:inline-block;">Ketahui Gejala Pribadi yang
                             anda alami terlebih dahulu. Ingat semua keluhan yang anda rasakan pada tubuh anda untuk
                             dianalisa oleh dokter kami!</p>
-                        <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a> -->
+                        
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
