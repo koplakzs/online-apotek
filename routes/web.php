@@ -25,7 +25,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get("/product", "product");
     Route::get("/contact", "contact");
     Route::get("/about", "about");
-    Route::get("/service", "service");
+    Route::get("/services", "service");
 });
 
 Route::controller(AuthController::class)->group(function () {
