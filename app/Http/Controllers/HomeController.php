@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Profile;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -20,7 +22,10 @@ class HomeController extends Controller
     }
     public function contact()
     {
-        return view("pages.contact");
+        $profile = Profile::find(1);
+        $user = User::find(1);
+
+        return view("pages.contact", compact('profile','user'));
     }
     public function service()
     {

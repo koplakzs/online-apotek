@@ -36,7 +36,7 @@
                         </div>
                         <div class="ms-4">
                             <p class="mb-2">Panggil Kami Sekarang</p>
-                            <h5 class="mb-0">+012 345 6789</h5>
+                            <h5>{{ $profile->no_hp }}</h5>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                         </div>
                         <div class="ms-4">
                             <p class="mb-2">Pesan Kami Sekarang</p>
-                            <h5 class="mb-0">apotekclinic@clinicwebsite.com</h5>
+                            <h5>{{ $user->email }}</h5>
                         </div>
                     </div>
                 </div>
