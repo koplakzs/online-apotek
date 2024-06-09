@@ -4,7 +4,7 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <h5 class="text-light mb-4">Alamat</h5>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Umban Sari, Kecamatan Rumbai, Kota Pekanbaru, Riau</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3" value="<?= $profile !== null ? $profile->no_hp : '' ?>"></i>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>
                     @php
                         $profile = App\Models\Profile::find(1); 
                     @endphp
