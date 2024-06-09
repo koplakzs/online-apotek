@@ -2,7 +2,7 @@
 
 Jalankan php artisan db:seed untuk mendapatkan akun admin. Akun admin : admin@gmail.com | password
 
-## Kelompok 23
+## Kelompok 3
 
 ## Anggota Kelompok
 
