@@ -153,7 +153,7 @@
                     <div class="col-xl-6 col-md-12">
                         <div class="card table-card">
                             <div class="card-header">
-                                <h5>Beberapa Jenis</h5>
+                                <h5>Beberapa Jenis Obat Yang Tersedia</h5>
                                 <div class="card-header-right">
                                     <ul class="list-unstyled card-option">
                                         <li><i class="fa fa fa-wrench open-card-option"></i>
@@ -173,73 +173,46 @@
                                             <tr>
                                                 <td>
                                                     <div class="d-inline-block align-middle">
-                                                        <img src="admin/assets/images/avatar-4.jpg" alt="user image"
-                                                            class="img-radius img-40 align-top m-r-15">
                                                         <div class="d-inline-block">
-                                                            <h6>Shirley Hoe</h6>
-                                                            <p class="text-muted m-b-0">Sales
-                                                                executive , NY</p>
+                                                            <h6>Antibiotik</h6>
+                                                            <p class="text-muted m-b-0">Amoxicillin, Penisilin, Makrolida, Glicopeptide, Aminoglikosida, Macrodiles, dll.</p>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td class="text-right">
-                                                    <h6 class="f-w-700">$78.001<i
-                                                            class="fas fa-level-down-alt text-c-red m-l-10"></i>
-                                                    </h6>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div class="d-inline-block align-middle">
-                                                        <img src="admin/assets/images/avatar-2.jpg" alt="user image"
-                                                            class="img-radius img-40 align-top m-r-15">
-                                                        <div class="d-inline-block">
-                                                            <h6>James Alexander</h6>
-                                                            <p class="text-muted m-b-0">Sales
-                                                                executive , EL</p>
+                                                            <h6>Antijamur</h6>
+                                                            <p class="text-muted m-b-0">Ketoconazole, Miconazole, Econazole, Clotrimazole, Vorizonazole, dll.</p>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td class="text-right">
-                                                    <h6 class="f-w-700">$89.051<i
-                                                            class="fas fa-level-up-alt text-c-green m-l-10"></i>
-                                                    </h6>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div class="d-inline-block align-middle">
-                                                        <img src="admin/assets/images/avatar-4.jpg" alt="user image"
-                                                            class="img-radius img-40 align-top m-r-15">
-                                                        <div class="d-inline-block">
-                                                            <h6>Shirley Hoe</h6>
-                                                            <p class="text-muted m-b-0">Sales
-                                                                executive , NY</p>
+                                                            <h6>Antipiretik</h6>
+                                                            <p class="text-muted m-b-0">Paracetamol, Ibuprofen, Decolgen, Aspirin, Meloxicam, Naproxen, dll.</p>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td class="text-right">
-                                                    <h6 class="f-w-700">$89.051<i
-                                                            class="fas fa-level-up-alt text-c-green m-l-10"></i>
-                                                    </h6>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div class="d-inline-block align-middle">
-                                                        <img src="admin/assets/images/avatar-2.jpg" alt="user image"
-                                                            class="img-radius img-40 align-top m-r-15">
-                                                        <div class="d-inline-block">
-                                                            <h6>Nick Xander</h6>
-                                                            <p class="text-muted m-b-0">Sales
-                                                                executive , EL</p>
+                                                            <h6>Antidiare</h6>
+                                                            <p class="text-muted m-b-0">Oralit, Entrostop, Kaotin, Diagit, Diapet, Diatabs, Probiotik, dll.</p>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td class="text-right">
-                                                    <h6 class="f-w-700">$89.051<i
-                                                            class="fas fa-level-up-alt text-c-green m-l-10"></i>
-                                                    </h6>
                                                 </td>
                                             </tr>
                                         </tbody>

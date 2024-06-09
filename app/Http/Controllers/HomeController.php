@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Profile;
 use App\Models\User;
+use App\Models\Produk;
 
 use App\Models\Service;
 
@@ -16,7 +17,8 @@ class HomeController extends Controller
     }
     public function product()
     {
-        return view("pages.product");
+        $produk = Produk::orderBy('updated_at', 'DESC')->get();
+        return view("pages.product", compact('produk'));
     }
     public function about()
     {
@@ -34,4 +36,5 @@ class HomeController extends Controller
         $service = Service::orderBy('updated_at', 'DESC')->get();
         return view("pages.service", compact('service'));
     }
+   
 }
