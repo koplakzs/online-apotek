@@ -9,7 +9,7 @@
         <div class="navbar-nav ms-auto p-4 p-lg-0">
             <a href="/" class="nav-item nav-link active">Home</a>
             <a href="/about" class="nav-item nav-link">About</a>
-            <a href="/service" class="nav-item nav-link">Service</a>
+            <a href="/services" class="nav-item nav-link">Service</a>
             <a href="/contact" class="nav-item nav-link">Contact Us</a>
         </div>
         <a href="/product" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Produk<i

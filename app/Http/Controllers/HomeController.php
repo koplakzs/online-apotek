@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Profile;
 use App\Models\User;
-use Illuminate\Http\Request;
+
+use App\Models\Service;
 
 class HomeController extends Controller
 {
@@ -29,6 +31,7 @@ class HomeController extends Controller
     }
     public function service()
     {
-        return view("pages.service");
+        $service = Service::orderBy('updated_at', 'DESC')->get();
+        return view("pages.service", compact('service'));
     }
 }
