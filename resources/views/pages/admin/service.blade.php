@@ -57,7 +57,7 @@
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <h5>Apakah anda yakin ingin menghapus kategori ini ?</h5>
+                                                    <h5>Apakah anda yakin ingin menghapus service ini ?</h5>
                                                     <form action="/administrator/service/{{ $value->service_id }}"
                                                         method="POST">
                                                         @method('delete')

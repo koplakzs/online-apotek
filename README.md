@@ -1,5 +1,7 @@
 ## Final Project
 
+Jalankan php artisan db:seed untuk mendapatkan akun admin. Akun admin : admin@gmail.com | password
+
 ## Kelompok 23
 
 ## Anggota Kelompok
@@ -19,4 +21,4 @@ Online Shop Apotek
 
 ## Link Video
 
-Link Demo Aplikasi :
+Link Demo Aplikasi : https://youtu.be/gCfZYRRu1NQ
